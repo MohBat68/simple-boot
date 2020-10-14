@@ -8,7 +8,26 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Calculator {
-     public int sum(int a, int b) {
-          return a + b;
-     }
+	public int sum(int a, int b) {
+		return a + b;
+	}
+}
+
+/**
+ * MessageBuilder.
+ */
+@Service
+public class MessageBuilder {
+
+	public String getMessage(String name) {
+
+		StringBuilder result = new StringBuilder();
+
+		if (name == null || name.trim().length() == 0) {
+			result.append("Please provide a name!");
+		} else {
+			result.append("Hello " + name);
+		}
+		return result.toString();
+	}
 }

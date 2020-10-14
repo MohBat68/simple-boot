@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.formation.service.Calculator;
+import com.formation.service.MessageBuilder;
 
 @SpringBootTest
 class ApplicationTests {
@@ -13,5 +14,9 @@ class ApplicationTests {
     @Test
     public void testSum() {
          assertEquals(5, calculator.sum(2, 3));
+    @Test
+    public void testName() {
+         MessageBuilder obk= new MessageBuilder ();
+         assertEquals("Hello Jean", obj.getMessage("Jean"));
     }
 }
